@@ -28,6 +28,8 @@
 		66C0BA95292160F900AE4FC3 /* HourWeatherCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C0BA93292160F900AE4FC3 /* HourWeatherCVC.swift */; };
 		66C0BA96292160F900AE4FC3 /* HourWeatherCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66C0BA94292160F900AE4FC3 /* HourWeatherCVC.xib */; };
 		66C0BA992921632200AE4FC3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 66C0BA982921632200AE4FC3 /* Kingfisher */; };
+		66C0BA9E29216D1900AE4FC3 /* VerticalDaysTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C0BA9C29216D1900AE4FC3 /* VerticalDaysTVC.swift */; };
+		66C0BA9F29216D1900AE4FC3 /* VerticalDaysTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66C0BA9D29216D1900AE4FC3 /* VerticalDaysTVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		66C0BA8E29215FCD00AE4FC3 /* HorizontalSecondTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalSecondTVC.xib; sourceTree = "<group>"; };
 		66C0BA93292160F900AE4FC3 /* HourWeatherCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourWeatherCVC.swift; sourceTree = "<group>"; };
 		66C0BA94292160F900AE4FC3 /* HourWeatherCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourWeatherCVC.xib; sourceTree = "<group>"; };
+		66C0BA9C29216D1900AE4FC3 /* VerticalDaysTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalDaysTVC.swift; sourceTree = "<group>"; };
+		66C0BA9D29216D1900AE4FC3 /* VerticalDaysTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerticalDaysTVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,7 @@
 		66C0BA71292122FC00AE4FC3 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				66C0BA9B29216CD600AE4FC3 /* VerticalDaysTVC */,
 				66C0BA8C29215F6A00AE4FC3 /* HorizontalSecondTVC */,
 				66C0BA7D2921289400AE4FC3 /* RealTimeTVC */,
 			);
@@ -188,6 +193,15 @@
 				66C0BA94292160F900AE4FC3 /* HourWeatherCVC.xib */,
 			);
 			path = HourWeatherCVC;
+			sourceTree = "<group>";
+		};
+		66C0BA9B29216CD600AE4FC3 /* VerticalDaysTVC */ = {
+			isa = PBXGroup;
+			children = (
+				66C0BA9C29216D1900AE4FC3 /* VerticalDaysTVC.swift */,
+				66C0BA9D29216D1900AE4FC3 /* VerticalDaysTVC.xib */,
+			);
+			path = VerticalDaysTVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +274,7 @@
 				66C0BA9029215FCD00AE4FC3 /* HorizontalSecondTVC.xib in Resources */,
 				66C0BA622921214300AE4FC3 /* Assets.xcassets in Resources */,
 				66C0BA602921214200AE4FC3 /* Main.storyboard in Resources */,
+				66C0BA9F29216D1900AE4FC3 /* VerticalDaysTVC.xib in Resources */,
 				66C0BA7C2921278400AE4FC3 /* MainCollectionViewCell.xib in Resources */,
 				66C0BA81292128BA00AE4FC3 /* RealTimeTableViewCell.xib in Resources */,
 				66C0BA96292160F900AE4FC3 /* HourWeatherCVC.xib in Resources */,
@@ -279,6 +294,7 @@
 				66C0BA8F29215FCD00AE4FC3 /* HorizontalSecondTVC.swift in Sources */,
 				66C0BA80292128BA00AE4FC3 /* RealTimeTableViewCell.swift in Sources */,
 				66C0BA95292160F900AE4FC3 /* HourWeatherCVC.swift in Sources */,
+				66C0BA9E29216D1900AE4FC3 /* VerticalDaysTVC.swift in Sources */,
 				66C0BA7B2921278400AE4FC3 /* MainCollectionViewCell.swift in Sources */,
 				66C0BA8B29215B5100AE4FC3 /* Ext_Color.swift in Sources */,
 				66C0BA592921214200AE4FC3 /* AppDelegate.swift in Sources */,

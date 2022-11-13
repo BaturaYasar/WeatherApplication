@@ -98,7 +98,7 @@ struct Astro: Codable {
 
 // MARK: - Day
 struct Day: Codable {
-    let maxtempC, maxtempF, mDoubleempC, mDoubleempF: Double?
+    let maxtempC,mintempC ,maxtempF, mDoubleempC, mDoubleempF: Double?
     let avgtempC, avgtempF, maxwindMph, maxwindKph: Double?
     let totalprecipMm, totalprecipIn: Double?
     let totalsnowCM, avgvisKM, avgvisMiles, avghumidity: Double?
@@ -109,6 +109,7 @@ struct Day: Codable {
     enum CodingKeys: String, CodingKey {
         case maxtempC = "maxtemp_c"
         case maxtempF = "maxtemp_f"
+        case mintempC = "mintemp_c"
         case mDoubleempC = "mDoubleemp_c"
         case mDoubleempF = "mDoubleemp_f"
         case avgtempC = "avgtemp_c"

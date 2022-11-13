@@ -6,22 +6,36 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     var forecastResponse:ForecastResponse?
+    var locationManager:CLLocationManager!
+    var userLocation:CLLocation?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
-        requestForecastWeather()
+        requestLocation()
         title = "WeatherApplication"
         
     }
     
-    func requestForecastWeather() {
-        NetworkManager.shared.forecastWeather(q: "Bursa", days: 3, language: "tr") { result in
+    private func requestLocation()  {
+        // Create a CLLocationManager and assign a delegate
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.distanceFilter = 100
+        // Request a user’s location once
+        locationManager.startUpdatingLocation()
+        locationManager.requestWhenInUseAuthorization()
+    }
+    
+        private func requestForecastWeather(_ userLocation:CLLocation) {
+        NetworkManager.shared.forecastWeather(q: "\(userLocation.coordinate.latitude),\(userLocation.coordinate.longitude)", days: 3, language: "tr") { result in
             switch result {
             case .success(let success):
                 self.forecastResponse = success
@@ -70,5 +84,19 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let size = UIScreen.main.bounds.size
         return CGSize(width: size.width, height: size.height)
+    }
+}
+
+// MARK: CLLocationManagerDelegate
+extension ViewController:CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager,didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            self.userLocation = location
+            requestForecastWeather(location)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
     }
 }
