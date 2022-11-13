@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -73,7 +74,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.28055011417438863" green="0.44376558031834012" blue="0.6303647960979798" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="pxF-JP-NTM" secondAttribute="bottom" id="AUG-vo-fXY"/>
                             <constraint firstItem="pxF-JP-NTM" firstAttribute="leading" secondItem="hL6-dz-x4w" secondAttribute="leading" id="JmB-oT-b1O"/>
@@ -85,7 +86,7 @@
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" red="0.24705882370000001" green="0.38823530080000002" blue="0.54509806630000002" alpha="0.74143729304635764" colorSpace="custom" customColorSpace="sRGB"/>
+                <color key="backgroundColor" name="blueColor"/>
                 <constraints>
                     <constraint firstItem="hL6-dz-x4w" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Dy8-v0-BhU"/>
                     <constraint firstAttribute="bottom" secondItem="hL6-dz-x4w" secondAttribute="bottom" id="fzM-19-thn"/>
@@ -94,7 +95,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <color key="backgroundColor" red="0.24705882370000001" green="0.38823530080000002" blue="0.54509806630000002" alpha="0.74143729300000005" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="TempLabel" destination="Sux-45-erx" id="qbW-27-8Sv"/>
                 <outlet property="backView" destination="hL6-dz-x4w" id="0EZ-zV-Qgv"/>
@@ -107,4 +108,9 @@
             <point key="canvasLocation" x="12.977099236641221" y="52.112676056338032"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <namedColor name="blueColor">
+            <color red="0.24699999392032623" green="0.3880000114440918" blue="0.54500001668930054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

@@ -23,6 +23,11 @@
 		66C0BA872921346E00AE4FC3 /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C0BA862921346E00AE4FC3 /* WeatherAPI.swift */; };
 		66C0BA89292134AF00AE4FC3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C0BA88292134AF00AE4FC3 /* NetworkManager.swift */; };
 		66C0BA8B29215B5100AE4FC3 /* Ext_Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C0BA8A29215B5100AE4FC3 /* Ext_Color.swift */; };
+		66C0BA8F29215FCD00AE4FC3 /* HorizontalSecondTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C0BA8D29215FCD00AE4FC3 /* HorizontalSecondTVC.swift */; };
+		66C0BA9029215FCD00AE4FC3 /* HorizontalSecondTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66C0BA8E29215FCD00AE4FC3 /* HorizontalSecondTVC.xib */; };
+		66C0BA95292160F900AE4FC3 /* HourWeatherCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C0BA93292160F900AE4FC3 /* HourWeatherCVC.swift */; };
+		66C0BA96292160F900AE4FC3 /* HourWeatherCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66C0BA94292160F900AE4FC3 /* HourWeatherCVC.xib */; };
+		66C0BA992921632200AE4FC3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 66C0BA982921632200AE4FC3 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +48,10 @@
 		66C0BA862921346E00AE4FC3 /* WeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
 		66C0BA88292134AF00AE4FC3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		66C0BA8A29215B5100AE4FC3 /* Ext_Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ext_Color.swift; sourceTree = "<group>"; };
+		66C0BA8D29215FCD00AE4FC3 /* HorizontalSecondTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSecondTVC.swift; sourceTree = "<group>"; };
+		66C0BA8E29215FCD00AE4FC3 /* HorizontalSecondTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalSecondTVC.xib; sourceTree = "<group>"; };
+		66C0BA93292160F900AE4FC3 /* HourWeatherCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourWeatherCVC.swift; sourceTree = "<group>"; };
+		66C0BA94292160F900AE4FC3 /* HourWeatherCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourWeatherCVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66C0BA992921632200AE4FC3 /* Kingfisher in Frameworks */,
 				66C0BA6E292121A900AE4FC3 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,8 +113,8 @@
 		66C0BA70292122F000AE4FC3 /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				66C0BA792921278400AE4FC3 /* MainCollectionViewCell.swift */,
-				66C0BA7A2921278400AE4FC3 /* MainCollectionViewCell.xib */,
+				66C0BA92292160DA00AE4FC3 /* HourWeatherCVC */,
+				66C0BA91292160BD00AE4FC3 /* MainCVC */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -112,7 +122,8 @@
 		66C0BA71292122FC00AE4FC3 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				66C0BA7D2921289400AE4FC3 /* RealTimeTableViewCell */,
+				66C0BA8C29215F6A00AE4FC3 /* HorizontalSecondTVC */,
+				66C0BA7D2921289400AE4FC3 /* RealTimeTVC */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -126,13 +137,13 @@
 			path = "Extensions ";
 			sourceTree = "<group>";
 		};
-		66C0BA7D2921289400AE4FC3 /* RealTimeTableViewCell */ = {
+		66C0BA7D2921289400AE4FC3 /* RealTimeTVC */ = {
 			isa = PBXGroup;
 			children = (
 				66C0BA7E292128BA00AE4FC3 /* RealTimeTableViewCell.swift */,
 				66C0BA7F292128BA00AE4FC3 /* RealTimeTableViewCell.xib */,
 			);
-			path = RealTimeTableViewCell;
+			path = RealTimeTVC;
 			sourceTree = "<group>";
 		};
 		66C0BA822921333B00AE4FC3 /* Model */ = {
@@ -150,6 +161,33 @@
 				66C0BA88292134AF00AE4FC3 /* NetworkManager.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		66C0BA8C29215F6A00AE4FC3 /* HorizontalSecondTVC */ = {
+			isa = PBXGroup;
+			children = (
+				66C0BA8D29215FCD00AE4FC3 /* HorizontalSecondTVC.swift */,
+				66C0BA8E29215FCD00AE4FC3 /* HorizontalSecondTVC.xib */,
+			);
+			path = HorizontalSecondTVC;
+			sourceTree = "<group>";
+		};
+		66C0BA91292160BD00AE4FC3 /* MainCVC */ = {
+			isa = PBXGroup;
+			children = (
+				66C0BA792921278400AE4FC3 /* MainCollectionViewCell.swift */,
+				66C0BA7A2921278400AE4FC3 /* MainCollectionViewCell.xib */,
+			);
+			path = MainCVC;
+			sourceTree = "<group>";
+		};
+		66C0BA92292160DA00AE4FC3 /* HourWeatherCVC */ = {
+			isa = PBXGroup;
+			children = (
+				66C0BA93292160F900AE4FC3 /* HourWeatherCVC.swift */,
+				66C0BA94292160F900AE4FC3 /* HourWeatherCVC.xib */,
+			);
+			path = HourWeatherCVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +208,7 @@
 			name = RecapWeatherApplication;
 			packageProductDependencies = (
 				66C0BA6D292121A900AE4FC3 /* Moya */,
+				66C0BA982921632200AE4FC3 /* Kingfisher */,
 			);
 			productName = RecapWeatherApplication;
 			productReference = 66C0BA552921214200AE4FC3 /* RecapWeatherApplication.app */;
@@ -201,6 +240,7 @@
 			mainGroup = 66C0BA4C2921214200AE4FC3;
 			packageReferences = (
 				66C0BA6C292121A900AE4FC3 /* XCRemoteSwiftPackageReference "Moya" */,
+				66C0BA972921632200AE4FC3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 66C0BA562921214200AE4FC3 /* Products */;
 			projectDirPath = "";
@@ -217,10 +257,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				66C0BA652921214300AE4FC3 /* LaunchScreen.storyboard in Resources */,
+				66C0BA9029215FCD00AE4FC3 /* HorizontalSecondTVC.xib in Resources */,
 				66C0BA622921214300AE4FC3 /* Assets.xcassets in Resources */,
 				66C0BA602921214200AE4FC3 /* Main.storyboard in Resources */,
 				66C0BA7C2921278400AE4FC3 /* MainCollectionViewCell.xib in Resources */,
 				66C0BA81292128BA00AE4FC3 /* RealTimeTableViewCell.xib in Resources */,
+				66C0BA96292160F900AE4FC3 /* HourWeatherCVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,7 +276,9 @@
 				66C0BA89292134AF00AE4FC3 /* NetworkManager.swift in Sources */,
 				66C0BA5D2921214200AE4FC3 /* ViewController.swift in Sources */,
 				66C0BA78292123A400AE4FC3 /* NSObject+Ext.swift in Sources */,
+				66C0BA8F29215FCD00AE4FC3 /* HorizontalSecondTVC.swift in Sources */,
 				66C0BA80292128BA00AE4FC3 /* RealTimeTableViewCell.swift in Sources */,
+				66C0BA95292160F900AE4FC3 /* HourWeatherCVC.swift in Sources */,
 				66C0BA7B2921278400AE4FC3 /* MainCollectionViewCell.swift in Sources */,
 				66C0BA8B29215B5100AE4FC3 /* Ext_Color.swift in Sources */,
 				66C0BA592921214200AE4FC3 /* AppDelegate.swift in Sources */,
@@ -474,6 +518,14 @@
 				version = 13.0.0;
 			};
 		};
+		66C0BA972921632200AE4FC3 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -481,6 +533,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 66C0BA6C292121A900AE4FC3 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
+		};
+		66C0BA982921632200AE4FC3 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66C0BA972921632200AE4FC3 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
