@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66BEAFD6292A716300A5BAF1 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BEAFD4292A716300A5BAF1 /* SearchVC.swift */; };
+		66BEAFD7292A716300A5BAF1 /* SearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66BEAFD5292A716300A5BAF1 /* SearchVC.xib */; };
+		66BEAFDA292A765F00A5BAF1 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BEAFD9292A765F00A5BAF1 /* SearchResponse.swift */; };
+		66BEAFDE292A99AD00A5BAF1 /* BasicTextTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BEAFDC292A99AD00A5BAF1 /* BasicTextTVC.swift */; };
+		66BEAFDF292A99AD00A5BAF1 /* BasicTextTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66BEAFDD292A99AD00A5BAF1 /* BasicTextTVC.xib */; };
+		66BEAFE2292A9C5700A5BAF1 /* BottomSheetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BEAFE0292A9C5700A5BAF1 /* BottomSheetVC.swift */; };
+		66BEAFE3292A9C5700A5BAF1 /* BottomSheetVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66BEAFE1292A9C5700A5BAF1 /* BottomSheetVC.xib */; };
 		66C0BA592921214200AE4FC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C0BA582921214200AE4FC3 /* AppDelegate.swift */; };
 		66C0BA5B2921214200AE4FC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C0BA5A2921214200AE4FC3 /* SceneDelegate.swift */; };
 		66C0BA5D2921214200AE4FC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C0BA5C2921214200AE4FC3 /* ViewController.swift */; };
@@ -33,6 +40,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		66BEAFD4292A716300A5BAF1 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		66BEAFD5292A716300A5BAF1 /* SearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchVC.xib; sourceTree = "<group>"; };
+		66BEAFD9292A765F00A5BAF1 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		66BEAFDC292A99AD00A5BAF1 /* BasicTextTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTextTVC.swift; sourceTree = "<group>"; };
+		66BEAFDD292A99AD00A5BAF1 /* BasicTextTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicTextTVC.xib; sourceTree = "<group>"; };
+		66BEAFE0292A9C5700A5BAF1 /* BottomSheetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetVC.swift; sourceTree = "<group>"; };
+		66BEAFE1292A9C5700A5BAF1 /* BottomSheetVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomSheetVC.xib; sourceTree = "<group>"; };
 		66C0BA552921214200AE4FC3 /* RecapWeatherApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecapWeatherApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C0BA582921214200AE4FC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66C0BA5A2921214200AE4FC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +85,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66BEAFD3292A711A00A5BAF1 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				66BEAFD8292A74D700A5BAF1 /* BottomSheet */,
+				66BEAFD4292A716300A5BAF1 /* SearchVC.swift */,
+				66BEAFD5292A716300A5BAF1 /* SearchVC.xib */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		66BEAFD8292A74D700A5BAF1 /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				66BEAFE0292A9C5700A5BAF1 /* BottomSheetVC.swift */,
+				66BEAFE1292A9C5700A5BAF1 /* BottomSheetVC.xib */,
+			);
+			path = BottomSheet;
+			sourceTree = "<group>";
+		};
+		66BEAFDB292A994500A5BAF1 /* BasicTextTVC */ = {
+			isa = PBXGroup;
+			children = (
+				66BEAFDC292A99AD00A5BAF1 /* BasicTextTVC.swift */,
+				66BEAFDD292A99AD00A5BAF1 /* BasicTextTVC.xib */,
+			);
+			path = BasicTextTVC;
+			sourceTree = "<group>";
+		};
 		66C0BA4C2921214200AE4FC3 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +138,7 @@
 				66C0BA6F292122E700AE4FC3 /* Cells */,
 				66C0BA582921214200AE4FC3 /* AppDelegate.swift */,
 				66C0BA5A2921214200AE4FC3 /* SceneDelegate.swift */,
+				66BEAFD3292A711A00A5BAF1 /* Scenes */,
 				66C0BA5C2921214200AE4FC3 /* ViewController.swift */,
 				66C0BA5E2921214200AE4FC3 /* Main.storyboard */,
 				66C0BA612921214300AE4FC3 /* Assets.xcassets */,
@@ -126,6 +169,7 @@
 		66C0BA71292122FC00AE4FC3 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				66BEAFDB292A994500A5BAF1 /* BasicTextTVC */,
 				66C0BA9B29216CD600AE4FC3 /* VerticalDaysTVC */,
 				66C0BA8C29215F6A00AE4FC3 /* HorizontalSecondTVC */,
 				66C0BA7D2921289400AE4FC3 /* RealTimeTVC */,
@@ -155,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				66C0BA83292133DD00AE4FC3 /* ForecastResponse.swift */,
+				66BEAFD9292A765F00A5BAF1 /* SearchResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -275,9 +320,12 @@
 				66C0BA622921214300AE4FC3 /* Assets.xcassets in Resources */,
 				66C0BA602921214200AE4FC3 /* Main.storyboard in Resources */,
 				66C0BA9F29216D1900AE4FC3 /* VerticalDaysTVC.xib in Resources */,
+				66BEAFE3292A9C5700A5BAF1 /* BottomSheetVC.xib in Resources */,
 				66C0BA7C2921278400AE4FC3 /* MainCollectionViewCell.xib in Resources */,
 				66C0BA81292128BA00AE4FC3 /* RealTimeTableViewCell.xib in Resources */,
+				66BEAFDF292A99AD00A5BAF1 /* BasicTextTVC.xib in Resources */,
 				66C0BA96292160F900AE4FC3 /* HourWeatherCVC.xib in Resources */,
+				66BEAFD7292A716300A5BAF1 /* SearchVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,17 +337,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				66C0BA89292134AF00AE4FC3 /* NetworkManager.swift in Sources */,
+				66BEAFDE292A99AD00A5BAF1 /* BasicTextTVC.swift in Sources */,
 				66C0BA5D2921214200AE4FC3 /* ViewController.swift in Sources */,
 				66C0BA78292123A400AE4FC3 /* NSObject+Ext.swift in Sources */,
 				66C0BA8F29215FCD00AE4FC3 /* HorizontalSecondTVC.swift in Sources */,
 				66C0BA80292128BA00AE4FC3 /* RealTimeTableViewCell.swift in Sources */,
 				66C0BA95292160F900AE4FC3 /* HourWeatherCVC.swift in Sources */,
+				66BEAFD6292A716300A5BAF1 /* SearchVC.swift in Sources */,
 				66C0BA9E29216D1900AE4FC3 /* VerticalDaysTVC.swift in Sources */,
 				66C0BA7B2921278400AE4FC3 /* MainCollectionViewCell.swift in Sources */,
 				66C0BA8B29215B5100AE4FC3 /* Ext_Color.swift in Sources */,
 				66C0BA592921214200AE4FC3 /* AppDelegate.swift in Sources */,
+				66BEAFDA292A765F00A5BAF1 /* SearchResponse.swift in Sources */,
 				66C0BA872921346E00AE4FC3 /* WeatherAPI.swift in Sources */,
 				66C0BA84292133DD00AE4FC3 /* ForecastResponse.swift in Sources */,
+				66BEAFE2292A9C5700A5BAF1 /* BottomSheetVC.swift in Sources */,
 				66C0BA5B2921214200AE4FC3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

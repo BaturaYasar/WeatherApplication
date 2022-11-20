@@ -11,9 +11,11 @@ import CoreLocation
 class ViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var pageControl: UIPageControl!
     var forecastResponse:ForecastResponse?
     var locationManager:CLLocationManager!
     var userLocation:CLLocation?
+    var userLocationArray = [CLLocation]()
     
     
     override func viewDidLoad() {
@@ -22,6 +24,23 @@ class ViewController: UIViewController {
         requestLocation()
         title = "WeatherApplication"
         
+        
+    }
+    
+    private func requestForecastWeather(_ userLocation:CLLocation) {
+        NetworkManager.shared.forecastWeather(q: "\(userLocation.coordinate.latitude),\(userLocation.coordinate.longitude)") { result in
+            switch result {
+            case .success(let model):
+                self.forecastResponse = model
+                self.reloadCollectionView()
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    func updatePageControlNumber(){
+        pageControl.numberOfPages = userLocationArray.count
     }
     
     private func requestLocation()  {
@@ -32,19 +51,6 @@ class ViewController: UIViewController {
         // Request a user’s location once
         locationManager.startUpdatingLocation()
         locationManager.requestWhenInUseAuthorization()
-    }
-    
-        private func requestForecastWeather(_ userLocation:CLLocation) {
-        NetworkManager.shared.forecastWeather(q: "\(userLocation.coordinate.latitude),\(userLocation.coordinate.longitude)", days: 3, language: "tr") { result in
-            switch result {
-            case .success(let success):
-                self.forecastResponse = success
-                self.reloadCollectionView()
-            case .failure(let error):
-                print(error)
-            }
-        }
-        
     }
     
     func setupCollectionView() {
@@ -59,14 +65,32 @@ class ViewController: UIViewController {
             self.collectionView.reloadData()
         }
     }
+    
+    
+    @IBAction func barButtonTouched(_ sender: Any) {
+        let vc = SearchVC()
+        vc.delegate = self
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 
+}
 
+extension ViewController: SearchVCDelegate {
+    func userSelect(_ userLocation: CLLocation) {
+        userLocationArray.append(userLocation)
+        updatePageControlNumber()
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
 }
 
 extension ViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return userLocationArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -85,13 +109,23 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
         let size = UIScreen.main.bounds.size
         return CGSize(width: size.width, height: size.height)
     }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let currentCount = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+        pageControl.currentPage = currentCount
+        let currentData = userLocationArray[currentCount]
+        requestForecastWeather(currentData)
+    }
 }
 
 // MARK: CLLocationManagerDelegate
 extension ViewController:CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager,didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
-            self.userLocation = location
+            if userLocationArray.count > 0 {
+                userLocationArray.remove(at: 0)
+            }
+            userLocationArray.insert(location, at: 0)
             requestForecastWeather(location)
         }
     }

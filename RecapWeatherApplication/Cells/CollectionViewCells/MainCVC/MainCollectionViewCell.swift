@@ -18,6 +18,7 @@ class MainCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         setupTableView()
     }
+   
     
     func setupTableView() {
         let uinib = UINib(nibName: RealTimeTableViewCell.identifier, bundle: nil)
@@ -28,7 +29,7 @@ class MainCollectionViewCell: UICollectionViewCell {
         tableView.register(uinibVertical, forCellReuseIdentifier: VerticalDaysTVC.identifier)
         tableView.delegate = self
         tableView.dataSource = self
-        
+        tableView.contentInset = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
     }
 
 }

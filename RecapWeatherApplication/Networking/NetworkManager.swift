@@ -22,9 +22,15 @@ class NetworkManager: NetworkManagerDelegate {
     
     var provider = MoyaProvider<WeatherAPI>(plugins: [NetworkLoggerPlugin(verbose: true, cURL: true)])
     
-    func forecastWeather(q: String, days: Int, language: String, completion: @escaping (Result<ForecastResponse, Error>) -> ()) {
+    func forecastWeather(q: String, days: Int = 3 , language: String = "tr", completion: @escaping (Result<ForecastResponse, Error>) -> ()) {
         request(target: .forecast(q: q, days: days, language: language), completion: completion)
     }
+    
+    func search(q:String, completion: @escaping (Result<[SearchResponse], Error>) -> ()) {
+        request(target: .search(q: q), completion: completion)
+    }
+    
+    
 }
 
 private extension NetworkManager {

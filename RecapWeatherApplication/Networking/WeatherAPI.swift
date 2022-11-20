@@ -10,6 +10,7 @@ import Moya
 
 enum WeatherAPI {
     case forecast(q:String, days:Int, language:String)
+    case search(q:String)
 }
 
 extension WeatherAPI:TargetType {
@@ -23,11 +24,20 @@ extension WeatherAPI:TargetType {
     }
     
     var path: String {
-        return "forecast.json"
+        switch self {
+        case .forecast:
+            return "forecast.json"
+        case .search:
+            return "search.json"
+        }
+        
     }
     
     var method: Moya.Method {
-        return .get
+        switch self {
+        default:
+            return .get
+        }
     }
     
     var sampleData: Data {
@@ -38,6 +48,8 @@ extension WeatherAPI:TargetType {
         switch self {
         case .forecast(let q, let days, let language):
             return .requestParameters(parameters: ["q":q, "days":days, "lang":language], encoding: URLEncoding.queryString)
+        case .search(q: let q):
+            return .requestParameters(parameters: ["q":q], encoding: URLEncoding.queryString)
         }
     }
     
